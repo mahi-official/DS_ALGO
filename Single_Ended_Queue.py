@@ -32,6 +32,7 @@ class ArrayQueue:
             raise Empty('Stack is Empty')
         return self._data[self._front]
 
+
 q = ArrayQueue()
 q.enqueue(20)
 q.enqueue(10)

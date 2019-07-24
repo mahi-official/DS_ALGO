@@ -1,4 +1,4 @@
-from collections import namedtuple
+from _collections import namedtuple
 
 a = namedtuple('courses', 'name, tech, place')
 s = a('mahesh', 'python', 'delhi')
@@ -8,7 +8,7 @@ print(s)
 print(t)
 
 #####################################################################
-from collections import deque
+from _collections import deque
 
 a = ['e', 'd', 'u', 't', 'a', 'm', 'h']
 d = deque(a)
@@ -23,7 +23,7 @@ d.popleft() #pop from start
 print(d)
 
 #####################################################################
-from collections import ChainMap
+from _collections import ChainMap
 
 a = {1:'Mahesh', 2:'Python'}
 a = {1:'Neha', 2:'GoLang'}
@@ -32,7 +32,7 @@ c = ChainMap(a,b)
 print(c)
 
 #####################################################################
-from collections import Counter
+from _collections import Counter
 
 a = [1,2,3,4,5,6,12,3,2,1,3,5,6,2,1,1,13,2]
 cnt = Counter(a) #counts no. of elements
@@ -41,7 +41,7 @@ print(list(cnt.elements())) #print sorted list
 print(c.most_common())
 
 #####################################################################
-from collections import OrderedDict
+from _collections import OrderedDict
 
 o =  OrderedDict()
 o[1] = 'm'
@@ -57,7 +57,7 @@ d[3] = 'l'
 print(o)
 
 #####################################################################
-from collections import defaultdict
+from _collections import defaultdict
 
 dd = defaultdict()
 
