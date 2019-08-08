@@ -1,6 +1,7 @@
 class Empty(Exception):
     pass
 
+
 class ArrayStack:
     def __init__(self):
         self._data = []
@@ -18,10 +19,12 @@ class ArrayStack:
         if self.is_empty():
             raise Empty('Stack is Empty')
         return self._data.pop()
+
     def top(self):
         if self.is_empty():
             raise Empty('Stack is Empty')
         return self._data[-1]
+
 
 s = ArrayStack()
 s.push(20)
