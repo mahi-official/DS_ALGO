@@ -1,6 +1,10 @@
-from collections import defaultdict
+import numpy as np
 
-b, c = [], defaultdict(list)
-x = 5
-c[x].append(x)
-print(c)
+a = np.zeros((10, 10))
+a[2][3] = 1
+a[3][2] = 1
+a[5][4] = 1
+a[5][1] = 1
+
+visited = [0] * 10
+print(visited)

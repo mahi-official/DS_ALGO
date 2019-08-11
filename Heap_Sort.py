@@ -1,7 +1,7 @@
 class Empty(Exception):
     pass
 
-class Heap:
+class HeapSort:
     def __init__(self):
         self.maxsize = 10
         self.data = [-1] * self.maxsize
@@ -29,7 +29,7 @@ class Heap:
             i = i//2
         self.data[i] = element
 
-    def deletemax(self):
+    def deletemin(self):
         if self.size == 0:
             raise Empty('Heap is Empty')
         x = self.data[1]
@@ -38,17 +38,19 @@ class Heap:
         i = 1
         ci = 2
         while ci <= self.size:
-            if ci < self.size and self.data[ci] < self.data[ci+1]:
+            if ci < self.size and self.data[ci] > self.data[ci+1]:
                 ci += 1
-            if y >= self.data[ci]:
+            if y <= self.data[ci]:
                 break
             self.data[i] = self.data[ci]
             i = ci
             ci = ci * 2
         self.data[i] = y
+        return x
 
 
-h = Heap()
+
+h = HeapSort()
 h.insert(25)
 h.insert(14)
 h.insert(2)
@@ -57,5 +59,5 @@ h.insert(10)
 h.insert(50)
 
 print(h.data)
-h.deletemax()
-print(h.data)
+for i in range(h.size):
+    print(h.deletemin(), end=',')
